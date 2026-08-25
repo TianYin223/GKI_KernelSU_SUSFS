@@ -1,4 +1,4 @@
-name: Build Xiaomi Pad 7 Pro GKI 6.1.138 SUSFS Stock KMI
+name: Build Xiaomi Pad 7 Pro GKI 6.1.68 SUSFS ThinLTO
 
 permissions:
   contents: read
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - codex/android14-6.1-138-susfs-stock-kmi
+      - codex/android14-6.1.68-susfs-thinlto
 
 jobs:
   build:
@@ -21,6 +21,6 @@ jobs:
       susfs_commit: e287d59066380bf6de4396532d4a42edf4408701
       preserve_abi: true
       build_bypass: false
-      os_patch_level: 2025-06
-      variant: KernelSU-Next-SUSFS-muyu-stock-kmi-exp
+      os_patch_level: 2024-02
+      variant: KernelSU-Next-SUSFS-muyu-6.1.68-exp
     secrets: inherit
