@@ -64,6 +64,7 @@ runs:
         fi
         tools/bazel build \
           --config=fast \
+          --lto=thin \
           --config=stamp \
           --disk_cache=/home/runner/.cache/bazel \
           //common:kernel_aarch64/Image

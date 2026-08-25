@@ -295,6 +295,8 @@ jobs:
         fi
 
     - name: Apply Kernel Branding
+      # Preserve the upstream android14-11 KMI release string for vendor modules.
+      if: false
       uses: ./.github/actions/apply-kernel-branding
       with:
         variant: ${{ inputs.variant }}

@@ -1,4 +1,4 @@
-name: Build Xiaomi Pad 7 Pro GKI 6.1.138
+name: Build Xiaomi Pad 7 Pro GKI 6.1.138 SUSFS Stock KMI
 
 permissions:
   contents: read
@@ -6,6 +6,9 @@ permissions:
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - codex/android14-6.1-138-susfs-stock-kmi
 
 jobs:
   build:
@@ -19,5 +22,5 @@ jobs:
       preserve_abi: true
       build_bypass: false
       os_patch_level: 2025-06
-      variant: KernelSU-Next-muyu
+      variant: KernelSU-Next-SUSFS-muyu-stock-kmi-exp
     secrets: inherit
